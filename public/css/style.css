@@ -98,7 +98,7 @@ form input[type='submit'] {
     height: 30px;
     border-radius: 5px;
     margin: 5px;
-    background: url(/public/icons/search-black.png) no-repeat center center;
+    background: url(./../icons/search-black.png) no-repeat center center;
     background-size: contain;
     scale: 0.7;
     cursor: pointer;
@@ -126,16 +126,21 @@ main {
     flex: auto;
     display: flex;
     flex-direction: column;
+    max-width: calc(100vw - 65px);
 }
 
 article {
     flex: auto;
     max-height: calc(100vh - 50px);
+    background-color: white;
     width: 100%;
     overflow-y: auto;
-    background-color: white;
     border-radius: 20px 0px 0px 0px;
     padding: 20px;
+}
+
+h2 {
+    font-size: 1.1em;
 }
 
 hr {
@@ -145,7 +150,7 @@ hr {
 }
 
 h3 {
-    font-size: 1em;
+    font-size: 0.9em;
     text-indent: 40px;
     padding: 10px 0px;
 }
@@ -156,7 +161,7 @@ h3 {
 }
 
 .section-musicas button img {
-    width: 100%;
+    width: 25px;
     background-color: white;
     box-shadow: -1px 2px #f1f1f1;
     cursor: pointer;
@@ -166,8 +171,8 @@ h3 {
 div.musicas {
     display: flex;
     gap: 5px;
-    max-width: calc(100vw - 155px);
-    /* background-color: black; */
+    width: 100%;
+    flex: auto;
     overflow: auto;
     margin: auto;
 
@@ -197,4 +202,17 @@ div.partitura p {
     font-size: 0.7em;
     font-weight: 500;
     color: white;
+}
+
+
+@media screen and (max-width:700px) {
+    .section-musicas button {
+        display: none;
+    }
+
+    h3 {
+        text-indent: 10px;
+    }
+
+    
 }
