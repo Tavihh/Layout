@@ -171,72 +171,20 @@ h3 {
     padding: 10px 0px;
 }
 
-.section-musicas {
-    display: flex;
-    align-items: center;
+.partitura {
+    border: 1px solid black;
+    margin: auto;
+    width: max-content;
+    height: auto;
 }
 
-.section-musicas button {
-    width: 25px;
-    cursor: pointer;
-    height: 225px;
+#osmd-container {
+    width: 100%;
     border: 1px solid black;
     border-radius: 5px;
-    background-color: white;
-    box-shadow: -3px 3px 0px rgba(0, 0, 0, 0.204);
-}
-
-.section-musicas button:nth-of-type(even){
-    box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.204);
-}
-
-.section-musicas button img {
-    width: 100%;
-}
-
-div.musicas {
-    display: flex;
-    gap: 5px;
-    padding-top: 10px ;
-    width: 100%;
-    flex: auto;
-    overflow: auto;
     margin: auto;
-
+    height: auto;
 }
-
-/* Estilo da partitura */
-div.partitura {
-    background-color: #101010;
-    width: max-content;
-    margin-bottom: 10px;
-    border-radius: 10px;
-    padding: 5px;
-    border: 1px solid black;
-    box-shadow: 0px 1px 2px black;
-    transition: transform 1s;
-}
-
-div.partitura:hover {
-    cursor: pointer;
-    transform: translateY(-5px);
-}
-
-div.partitura img {
-    width: 130px;
-    height: 180px;
-    border-radius: inherit;
-    padding: 1px;
-}
-
-div.partitura p {
-    max-width: 130px;
-    text-align: center;
-    font-size: 0.7em;
-    font-weight: 500;
-    color: white;
-}
-
 
 @media screen and (max-width:700px) {
 
@@ -250,23 +198,6 @@ div.partitura p {
 
     aside {
         padding-top: 5px;
-    }
-
-    article {
-        padding: 3px;
-    }
-
-    h2 {
-        padding: 20px 0px 0px 20px;
-    }
-
-    hr {
-        margin-left: 20px;
-    }
-
-    .section-musicas button, .section-musicas button:nth-of-type(even) {
-        box-shadow: 0px 0px 0px transparent;
-        /* display: none; */
     }
 
     h3 {

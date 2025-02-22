@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout Principal</title>
+    <link rel="stylesheet" href="./public/css/partitura.css">
+    <script src="https://unpkg.com/opensheetmusicdisplay@1.4.1/build/opensheetmusicdisplay.min.js"></script>
+</head>
+<body>
+    <aside>
+        <img src="./public/imgs/logo.png" alt="" class="logo">
+        <a href="#"><img src="./public/icons/manage_accounts-black.png" alt=""></a>
+        <a href="#"><img src="./public/icons/folder_special-black.png" alt=""></a>
+        <a href="#"><img src="./public/icons/book-black.png" alt=""></a>
+        <a href="#"><img src="./public/icons/logout-black.png" alt=""></a>
+
+    </aside>
+    <main>
+        <header>
+            <h1>Trinados</h1>
+            <form action="">
+                <input type="search" name="psq" id="psq" placeholder="Partitura...">
+                <input type="submit" value="">
+            </form>
+            <button><img src="./public/icons/notifications-black.png" alt=""></button>
+        </header>
+        <article>
+            <h2>Mamãe eu quero</h2>
+            <small>Marchinha de Carnaval</small>
+            <hr>
+
+        <!-- <input type="file" id="fileInput" accept=".musicxml, .xml"> -->
+        <div id="osmd-container"></div>
+            
+        </article>
+    </main>
+</body>
+<script src="./public/js/scripts.js"></script>
+</html>

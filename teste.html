@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Renderizar Partitura</title>
+    <script src="https://unpkg.com/opensheetmusicdisplay@1.4.1/build/opensheetmusicdisplay.min.js"></script>
+    <style>
+        #osmd-container {
+            width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <input type="file" id="fileInput" accept=".musicxml, .xml">
+    <div id="osmd-container"></div>
+
+    <script>
+        document.getElementById("fileInput").addEventListener("change", function (event) {
+            const file = event.target.files[0];
+            if (!file) return;
+
+            const reader = new FileReader();
+            reader.onload = function (e) {
+                const osmd = new opensheetmusicdisplay.OpenSheetMusicDisplay("osmd-container", {
+                    drawingParameters: "compact"
+                });
+
+                osmd.load(e.target.result).then(() => {
+                    osmd.render();
+                });
+            };
+
+            reader.readAsText(file);
+        });
+    </script>
+</body>
+</html>
